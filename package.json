@@ -13,6 +13,14 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@chakra-ui/react": "^1.0.0",
+  "formik": "^2.2.0",
+  "yup": "^0.32.0",
+  "@fortawesome/react-fontawesome": "^0.1.0",
+  "@fortawesome/free-solid-svg-icons": "^5.15.4",
+  "@fortawesome/free-brands-svg-icons": "^5.15.4",
+  "react-dom": "^18.0.0",  
+  "web-vitals": "^2.1.0",
     "react-scripts": "^5.0.1"
   },
   "browserslist": {
