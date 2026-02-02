@@ -57,16 +57,31 @@ const Header = () => {
       backgroundColor="#18181b"
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
-        <HStack px={16} py={4} justifyContent="space-between">
-          <HStack spacing={8}>
-            {socials.map((s, i) => (
-              <a key={i} href={s.url} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={s.icon} size="2x" />
-              </a>
-            ))}
-          </HStack>
+        <HStack
+  px={{ base: 4, md: 16 }}
+  py={4}
+  spacing={{ base: 4, md: 0 }}
+  justifyContent="space-between"
+  flexWrap="wrap"
+>
 
-          <HStack spacing={8}>
+
+          <HStack spacing={8} display={{ base: "none", md: "flex" }}>
+  {socials.map((s, i) => (
+    <a key={i} href={s.url} target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={s.icon} size="2x" />
+    </a>
+  ))}
+</HStack>
+
+
+          <HStack
+  spacing={{ base: 4, md: 8 }}
+  flexWrap="wrap"
+  justifyContent={{ base: "center", md: "flex-end" }}
+  width={{ base: "100%", md: "auto" }}
+>
+
             <button onClick={() => goToSection("LandingSection")}>Home</button>
             <button onClick={() => goToSection("projects-section")}>Projects</button>
             <button onClick={() => goToSection("contactme-section")}>Contact me</button>

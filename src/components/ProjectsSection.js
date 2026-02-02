@@ -37,20 +37,21 @@ const ProjectCarousel = () => {
   }}
         >
          <Heading
-  fontSize="6xl"
-  letterSpacing="widest"
-  color="teal.400">
-  PROJECT<br />HIGHLIGHTS
-</Heading>
+        fontSize={{ base: "3xl", md: "6xl" }}
+        top={{ base: "10vh", md: "35vh" }}
+        letterSpacing="widest"
+        color="teal.400">
+        PROJECT<br />HIGHLIGHTS
+        </Heading>
 
         </VStack>
 
         <Heading as="h1" id="projects-section"></Heading>
 
         <Grid
-          templateColumns="1fr 1fr 1fr"
+          templateColumns={{ base: "1fr", md: "1fr 1fr 1fr" }}
+          gap={{ base: 12, md: 16 }}
           alignItems="center"
-          gap={16}
           width="100%"
           justifyItems="center"
         >
@@ -65,11 +66,12 @@ const ProjectCarousel = () => {
 
             return (
               <GridItem
-                key={project.id}
-                colStart={position}
-                rowStart={rowPosition}
-                colSpan={1}
-              >
+  key={project.id}
+  colStart={{ base: 1, md: position }}
+  rowStart={{ base: "auto", md: rowPosition }}
+  colSpan={1}
+>
+
                 <Card {...project} />
               </GridItem>
             );

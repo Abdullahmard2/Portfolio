@@ -19,7 +19,7 @@ const Card = ({ id, title, description, imageSrc }) => {
         zIndex={3}
           src={imageSrc}
           alt={title}
-          maxW="600px"
+          maxW={{ base: "100%", md: "600px" }}
           borderRadius="2xl"
           boxShadow="12px 12px 12px rgba(0.9, 0, 0, 0.9)"
           objectFit="cover"
