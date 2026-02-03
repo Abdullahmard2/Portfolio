@@ -2,7 +2,8 @@ import { Heading, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ id, title, description, imageSrc }) => {
+const Card = ({ id, title, description, imageSrc, liveUrl }) => {
+
   return (
     <VStack
     zIndex={2}
@@ -14,19 +15,40 @@ const Card = ({ id, title, description, imageSrc }) => {
       _hover={{ transform: "translateY(-6px)" }}
     >
       {/* Image */}
-      <Link to={`/projects/${id}`}>
-        <Image
-        zIndex={3}
-          src={imageSrc}
-          alt={title}
-          maxW={{ base: "100%", md: "600px" }}
-          borderRadius="2xl"
-          boxShadow="12px 12px 12px rgba(0.9, 0, 0, 0.9)"
-          objectFit="cover"
-          transition="transform 0.4s ease"
-          _hover={{ transform: "scale(1.04)" }}
-        />
-      </Link>
+      {liveUrl ? (
+  <a
+    href={liveUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image
+      zIndex={3}
+      src={imageSrc}
+      alt={title}
+      maxW={{ base: "100%", md: "600px" }}
+      borderRadius="2xl"
+      boxShadow="12px 12px 12px rgba(0.9, 0, 0, 0.9)"
+      objectFit="cover"
+      transition="transform 0.4s ease"
+      _hover={{ transform: "scale(1.04)" }}
+    />
+  </a>
+) : (
+  <Link to={`/projects/${id}`}>
+    <Image
+      zIndex={3}
+      src={imageSrc}
+      alt={title}
+      maxW={{ base: "100%", md: "600px" }}
+      borderRadius="2xl"
+      boxShadow="12px 12px 12px rgba(0.9, 0, 0, 0.9)"
+      objectFit="cover"
+      transition="transform 0.4s ease"
+      _hover={{ transform: "scale(1.04)" }}
+    />
+  </Link>
+)}
+
 
       {/* Text-Project */}
       <VStack align="start" spacing={1}>
