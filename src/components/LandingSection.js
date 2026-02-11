@@ -20,11 +20,9 @@ const LandingSection = () => (
       />
       <Heading as="h1">Hello, I am Abdullah!</Heading>
       <Text fontSize="xl" textAlign="center">
-        A frontend developer and an architect
+        An Architect and Frontend Developer
       </Text>
-      <Text fontSize="lg" textAlign="center">
-        Specialised in React and urban planning
-      </Text>
+      
     </VStack>
   </FullScreenSection>
 );
