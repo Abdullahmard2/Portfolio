@@ -1,18 +1,27 @@
 import { useState } from "react";
 
-const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
 const useSubmit = () => {
   const [isLoading, setLoading] = useState(false);
 
   const submit = async (data) => {
     setLoading(true);
     try {
-      await wait(2000);
-      if (Math.random() < 0.5) {
-        throw new Error("Something went wrong");
+      const response = await fetch("https://formspree.io/f/https://formspree.io/f/xeajaajp", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: JSON.stringify({
+          name: data.firstName,
+          email: data.email,
+          type: data.type,
+          message: data.comment,
+        }),
+      });
+
+      if (response.ok) {
+        return { type: "success", message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!` };
+      } else {
+        throw new Error("Formspree error");
       }
-      return { type: "success", message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!` };
     } catch (error) {
       return { type: "error", message: "Something went wrong, please try again later!" };
     } finally {
