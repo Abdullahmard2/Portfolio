@@ -23,7 +23,7 @@ const LandingSection = () => {
       const res = await submit(values);
 
       if (res.type === "success") {
-        onOpen("success", `Thank you, ${values.firstName}! This is a test service and not fully functional. Please use the email button above to contact me.`);
+        onOpen("success", `Thank you for contacting me, ${values.firstName}! I'll get back to you soon.`);
         resetForm();
       } else {
         onOpen("error", "An error occurred. Please try again later.");
