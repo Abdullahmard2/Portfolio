@@ -1,17 +1,4 @@
 const projectsData = [
-{id: "Little_Lemon",
-    title: "Little Lemon",
-    description: "Restaurant website built with React, featuring a reservation booking system and a contact form.",
-     imageSrc: require("../images/Little_Lemon.jpg"),
-     liveUrl: "https://my-project2-opal.vercel.app/"
- },
-
-  {id: "MS_Jewerly",
-    title: "MS Jewerly",
-    description: "MS Jewelry is a small landing page for a jewelry shop, designed using HTML and CSS. It showcases a clean layout and basic product presentation for a modern storefront feel.",
-     imageSrc: require("../images/MS_Jewerly.jpg"),
-     liveUrl: "https://m-g-jewellery.vercel.app/"
- },
   {
     id: "windmill",
     title: "Windmill",
@@ -26,6 +13,19 @@ const projectsData = [
     imageSrc: require("../images/BA_Abgabe.png"),
     liveUrl: "https://architecture-project-viewer.vercel.app/project/1/"
   },
+  {id: "Little_Lemon",
+    title: "Little Lemon",
+    description: "Restaurant website built with React, featuring a reservation booking system and a contact form.",
+     imageSrc: require("../images/Little_Lemon.jpg"),
+     liveUrl: "https://my-project2-opal.vercel.app/"
+ },
+
+  {id: "MS_Jewerly",
+    title: "MS Jewerly",
+    description: "MS Jewelry is a small landing page for a jewelry shop, designed using HTML and CSS. It showcases a clean layout and basic product presentation for a modern storefront feel.",
+     imageSrc: require("../images/MS_Jewerly.jpg"),
+     liveUrl: "https://m-g-jewellery.vercel.app/"
+ },
   {
     id: "residential-building",
     title: "Residential Building",
