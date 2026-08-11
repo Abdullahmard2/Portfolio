@@ -4,7 +4,7 @@ const projectsData = [
     title: "Transit",
     description: "The community hall serves as a kind of interim station for students. Here, they are given the opportunity to use the time between daily activities",
     imageSrc: require("../images/BA_Abgabe.png"),
-    liveUrl: "https://transit-projekt-jjd7wriup-abdullahs-projects-31d8847a.vercel.app"
+    liveUrl: "transit-projekt.vercel.app"
   },
   {
     id: "residential-building",
